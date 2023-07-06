@@ -2,7 +2,6 @@ package feladat04_Teszt;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-
 import org.junit.jupiter.api.Test;
 
 import feladat04.FajlKezeles;
@@ -18,5 +17,9 @@ class FajlKezelesTest {
 		assertTrue(fajlObj.ellenoriz(tesztCsvSor));
 		
 	}
+	
+	
+	
+	
 	
 }
