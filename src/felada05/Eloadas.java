@@ -1,4 +1,4 @@
-package feladat05;
+package felada05;
 
 import java.time.LocalDate;
 
