@@ -68,7 +68,7 @@ DefaultListModel<Eloadas> lm = new DefaultListModel<Eloadas>();
 				}
 			}
 		});
-		frmEloadasok.setTitle("házi előadások");
+		frmEloadasok.setTitle("Színházi előadások");
 		frmEloadasok.setBounds(100, 100, 700, 400);
 		frmEloadasok.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		frmEloadasok.getContentPane().setLayout(null);

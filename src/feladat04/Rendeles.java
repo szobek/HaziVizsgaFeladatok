@@ -47,8 +47,9 @@ public class Rendeles {
 
 	@Override
 	public String toString() {
-		return "Rendeles [szallitoiAzonosito=" + szallitoiAzonosito + ", megnevezes=" + megnevezes + ", mennyiseg="
-				+ mennyiseg + ", osszertek=" + osszertek + ", surgos=" + surgos + "]";
+		return "Rendeles Azonosító=" + szallitoiAzonosito + ", megnevezés:" + megnevezes + ", mennyiség:"
+				+ mennyiseg + ", összérték:" + osszertek + "Ft, sürgős: "
+				+ ((surgos)?"sürgős":"nem sürgős");
 	}
 
 }

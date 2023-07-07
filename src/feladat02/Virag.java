@@ -13,7 +13,7 @@ public class Virag extends Noveny {
 
 	@Override
 	public String toString() {
-		return "Szín: " + viragszin +", megnevezés: "+ super.getMegnevezes()+ ", aonosító:  "+super.getAzonosito()+", bekerülés éve: "+super.getBekerulesEve();
+		return "Azonosító:" + super.getAzonosito() + ", megnevezés:" + super.getMegnevezes() + ", bekerüles éve:" + super.getBekerulesEve()+", szín: " + viragszin;  
 	}
 	
 	

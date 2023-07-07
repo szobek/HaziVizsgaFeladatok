@@ -14,7 +14,7 @@ public class botanikusKertApplikacio {
 
 	private static void writeAllData() {
 		for (Noveny noveny : novenyek) {
-			System.out.println(noveny+" "+noveny.hanyHonapjaLatogathato() + " hónapja látogatható. "+noveny.getClass());
+			System.out.println(noveny+" "+noveny.hanyHonapjaLatogathato() + " hónapja látogatható. "+((noveny.getClass().toString().equals("class feladat02.Noveny"))?"általános növény":"virág"));
 		}
 
 	}

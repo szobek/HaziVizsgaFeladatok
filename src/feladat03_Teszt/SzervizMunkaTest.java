@@ -23,11 +23,12 @@ class SzervizMunkaTest {
 		
 	}
 	@Test
-	void mapTeszt() {
-		Map<String, Integer> w = FoprogramAutoSzerviz.worksMap;
-		w.put("work" , 1);
-		String elvart = "java.lang.Integer";
-		assertEquals(elvart,w.get("work").getClass());
+	void maxTeszt() {
+		
+		FoprogramAutoSzerviz.works.add(new SzervizMunka("Olajcsre", 2));
+		FoprogramAutoSzerviz.works.add(new SzervizMunka("gyertyacsere", 12));
+		int wi = FoprogramAutoSzerviz.searchLongerWorks();
+		assertTrue(wi>0&&wi<FoprogramAutoSzerviz.works.size());
 		
 	}
 

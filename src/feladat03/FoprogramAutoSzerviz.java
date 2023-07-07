@@ -1,5 +1,6 @@
 package feladat03;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -9,7 +10,7 @@ import java.util.Scanner;
 
 public class FoprogramAutoSzerviz {
 
-	static List<SzervizMunka> works = new ArrayList<SzervizMunka>();
+	public static List<SzervizMunka> works = new ArrayList<SzervizMunka>();
 	public static Map<String, Integer> worksMap = new HashMap<String, Integer>();
 	
 	public static void main(String[] args) {
@@ -18,7 +19,7 @@ public class FoprogramAutoSzerviz {
 		createWorks(oradij);
 	}
 
-	private static void createWorks(int oradij) {
+	public static void createWorks(int oradij) {
 		try (Scanner sc = new Scanner(System.in)) {
 			System.out.println("Visz fel?");
 			String ujmunka = sc.nextLine();
@@ -35,19 +36,22 @@ public class FoprogramAutoSzerviz {
 				ujmunka=sc.nextLine();
 			}
 		} catch (Exception e) {
+			System.out.println("Hiba");
 		}
-		searchLongerWorks(oradij);
+		//int windex = searchLongerWorks();
+		//System.out.println("A leghosszabb : "+works.get(windex).getSzervizTevekenyseg()+ " ("+works.get(windex).getMunkaOra()+" óra)");
+		//generateMap(oradij);
 	}
 
-	private static void searchLongerWorks(int oradij) {
+	public static int searchLongerWorks() {
 		int windex=0;
 		for(int i=0;i<works.size();i++) {
 			if(works.get(i).getMunkaOra()>works.get(windex).getMunkaOra()) {
 				windex=i;
 			}
 		}
-		System.out.println("A leghosszabb : "+works.get(windex).getSzervizTevekenyseg()+ " ("+works.get(windex).getMunkaOra()+" óra)");
-		generateMap(oradij);
+		return windex;
+		
 	}
 	private static void generateMap(int oradij) {
 		for(SzervizMunka work:works) {
