@@ -28,7 +28,7 @@ class SzervizMunkaTest {
 		FoprogramAutoSzerviz.works.add(new SzervizMunka("Olajcsre", 2));
 		FoprogramAutoSzerviz.works.add(new SzervizMunka("gyertyacsere", 12));
 		int wi = FoprogramAutoSzerviz.searchLongerWorks();
-		assertTrue(wi>0&&wi<FoprogramAutoSzerviz.works.size());
+		assertEquals(1,wi);
 		
 	}
 
