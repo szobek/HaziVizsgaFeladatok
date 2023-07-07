@@ -38,9 +38,9 @@ public class FoprogramAutoSzerviz {
 		} catch (Exception e) {
 			System.out.println("Hiba");
 		}
-		//int windex = searchLongerWorks();
-		//System.out.println("A leghosszabb : "+works.get(windex).getSzervizTevekenyseg()+ " ("+works.get(windex).getMunkaOra()+" óra)");
-		//generateMap(oradij);
+		int windex = searchLongerWorks();
+		System.out.println("A leghosszabb : "+works.get(windex).getSzervizTevekenyseg()+ " ("+works.get(windex).getMunkaOra()+" óra)");
+		generateMap(oradij);
 	}
 
 	public static int searchLongerWorks() {
