@@ -64,8 +64,8 @@ public class titkositoApplikacio {
 	    		    	
 	    	eredmeny = eredmeny.substring(1,eredmeny.length())+eredmeny.charAt(0);
 	    	
-	    }	    
-		
+	    }	 
+	   
 		return eredmeny;
 	}
 

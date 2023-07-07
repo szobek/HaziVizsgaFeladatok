@@ -7,6 +7,7 @@ import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.nio.charset.Charset;
 import java.util.List;
 
 public class FajlKezeles {
@@ -48,7 +49,7 @@ public class FajlKezeles {
 	public boolean writeCsvFile(List<Rendeles> rendelesek) {
 String csvName = "UjSzallitoiRendelesek.csv";
 		 try {
-			 BufferedWriter writer = new BufferedWriter(new FileWriter(csvName));
+			 BufferedWriter writer = new BufferedWriter(new FileWriter(csvName,Charset.forName("UTF-8")));
 			 writer.append("szallitoiAzonosito;megnevezes;menniseg;osszertek;surgos \n");
 			 for(Rendeles rendeles:rendelesek) {
 					writer.append(rendeles.getSzallitoiAzonosito()+ ";"+rendeles.getMegnevezes()+ ";"+rendeles.getMennyiseg()

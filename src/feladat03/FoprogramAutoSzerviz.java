@@ -44,7 +44,7 @@ public class FoprogramAutoSzerviz {
 
 	public static int searchLongerWorks() {
 		int windex=0;
-		for(int i=0;i<works.size();i++) {
+		for(int i=1;i<works.size();i++) {
 			if(works.get(i).getMunkaOra()>works.get(windex).getMunkaOra()) {
 				windex=i;
 			}
