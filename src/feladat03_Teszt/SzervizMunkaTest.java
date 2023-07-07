@@ -1,12 +1,7 @@
 package feladat03_Teszt;
 
-import static org.junit.Assert.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
-
-import java.util.Map;
-
 import org.junit.jupiter.api.Test;
-
 import feladat03.FoprogramAutoSzerviz;
 import feladat03.SzervizMunka;
 

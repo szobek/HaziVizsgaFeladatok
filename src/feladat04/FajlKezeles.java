@@ -45,18 +45,10 @@ public class FajlKezeles {
 		return csvSor.length == 5 && csvSor[0].length() >= 5;
 		
 	}
-	public void writeCsvFile(List<Rendeles> rendelesek) {
-		// File csvOutputFile = new File("UjSzallitoiRendelesek.csv");
-		
+	public boolean writeCsvFile(List<Rendeles> rendelesek) {
+String csvName = "UjSzallitoiRendelesek.csv";
 		 try {
-			 BufferedWriter writer = new BufferedWriter(new FileWriter("UjSzallitoiRendelesek.csv"));
-			 /*
-			  * this.szallitoiAzonosito = szallitoiAzonosito;
-		this.megnevezes = megnevezes;
-		this.mennyiseg = mennyiseg;
-		this.osszertek = osszertek;
-		this.surgos = surgos;
-			  */
+			 BufferedWriter writer = new BufferedWriter(new FileWriter(csvName));
 			 writer.append("szallitoiAzonosito;megnevezes;menniseg;osszertek;surgos \n");
 			 for(Rendeles rendeles:rendelesek) {
 					writer.append(rendeles.getSzallitoiAzonosito()+ ";"+rendeles.getMegnevezes()+ ";"+rendeles.getMennyiseg()
@@ -67,6 +59,8 @@ public class FajlKezeles {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		 File file = new File(csvName);
+		 return file.exists();
 		
 	}
 

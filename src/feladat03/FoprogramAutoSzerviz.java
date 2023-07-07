@@ -1,6 +1,5 @@
 package feladat03;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -12,14 +11,14 @@ public class FoprogramAutoSzerviz {
 
 	public static List<SzervizMunka> works = new ArrayList<SzervizMunka>();
 	public static Map<String, Integer> worksMap = new HashMap<String, Integer>();
-	
+	public static int oradij = 8000;
 	public static void main(String[] args) {
 
-		int oradij = 8000;
-		createWorks(oradij);
+		
+		createWorks();
 	}
 
-	public static void createWorks(int oradij) {
+	public static void createWorks() {
 		try (Scanner sc = new Scanner(System.in)) {
 			System.out.println("Visz fel?");
 			String ujmunka = sc.nextLine();
@@ -40,7 +39,7 @@ public class FoprogramAutoSzerviz {
 		}
 		int windex = searchLongerWorks();
 		System.out.println("A leghosszabb : "+works.get(windex).getSzervizTevekenyseg()+ " ("+works.get(windex).getMunkaOra()+" óra)");
-		generateMap(oradij);
+		generateMap();
 	}
 
 	public static int searchLongerWorks() {
@@ -53,7 +52,7 @@ public class FoprogramAutoSzerviz {
 		return windex;
 		
 	}
-	private static void generateMap(int oradij) {
+	private static void generateMap() {
 		for(SzervizMunka work:works) {
 			worksMap.put(work.getSzervizTevekenyseg(), work.arKepzes(oradij));
 		}

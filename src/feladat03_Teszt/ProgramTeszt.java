@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 class ProgramTeszt {
 
 	@Test
-	void test() {
+	void ora() {
 	}
 
 }
